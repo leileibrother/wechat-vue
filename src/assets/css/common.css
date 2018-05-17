@@ -1,0 +1,216 @@
+body{
+	font-family: "Microsoft YaHei","ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","WenQuanYi Micro Hei",sans-serif;
+}
+html,body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, tr,input,textarea {margin:0; padding:0;box-sizing: border-box;}
+ul,li{list-style:none;}
+html,body{width:100%;height:100%;min-width:320px;max-width:750px;margin:0 auto;font-size:0.28rem;color:#000;background:#fafafa;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after{
+    content:'';
+    display:block;
+    clear: both;
+}
+button:focus,input[type="button"]:focus{outline: none;}
+input:-webkit-autofill,
+input:-webkit-autofill:focus{
+        box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset !important;
+        -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset !important;
+}
+input::-webkit-search-cancel-button{display: none;}
+input::-ms-clear{display: none;}
+/* 谷歌 聚焦去掉placeholder */
+input:focus::-webkit-input-placeholder{
+    text-indent: -999em;
+    z-index: -20;
+}
+textarea:focus::-webkit-input-placeholder{
+    text-indent: -999em;
+    z-index: -20;
+}
+textarea {
+    resize: none;
+}
+a{text-decoration:none;}
+a:focus {outline: none;text-decoration:none;}
+a:active,a:hover {
+    outline:0;
+    text-decoration:none;
+    cursor:pointer;
+}
+input,textarea{outline:none} 
+
+input[disabled],input:disabled,input.disabled{  
+    color: #333;  
+    -webkit-text-fill-color:#333;  
+    -webkit-opacity:1;  
+    opacity: 1;  
+}
+
+input::-webkit-input-placeholder{color: #333;font-size:0.28rem;}    /* 使用webkit内核的浏览器 */
+input:-moz-placeholder{color: #333;font-size:0.28rem;}                  /* Firefox版本4-18 */
+input::-moz-placeholder{color: #333;font-size:0.28rem;}                  /* Firefox版本19+ */
+input:-ms-input-placeholder{color: #333;font-size:0.28rem;}           /* IE浏览器 */
+
+textarea::-webkit-input-placeholder{color: #333;font-size:0.28rem;}    /* 使用webkit内核的浏览器 */
+textarea:-moz-placeholder{color: #333;font-size:0.28rem;}                  /* Firefox版本4-18 */
+textarea::-moz-placeholder{color: #333;font-size:0.28rem;}                  /* Firefox版本19+ */
+textarea:-ms-input-placeholder{color: #333;font-size:0.28rem;}  
+
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}  
+
+
+/** 修改组件复选框样式 **/
+.mint-checklist-label{padding:0;}
+.mint-cell-wrapper{padding:0;}
+.explain .mint-cell-wrapper{background: #fafafa;}
+.mint-checkbox-input:checked + .mint-checkbox-core {
+    background-color: #00B4DC;
+    border-color: #00B4DC;
+}
+.mint-checkbox-core {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: relative;
+    width: 0.32rem;
+    height:0.32rem;
+    vertical-align: middle;
+    border-radius:0;
+}
+.mint-checkbox-label{font-size:0.28rem;margin-left:4px;}
+.mint-checkbox-core::after{top: 2px;left: 5px;}
+.mint-cell-wrapper{border:none;}
+/***/
+.mint-field .mint-cell-title{width:1.52rem;margin-left: 0.47rem;}
+.mint-field .mint-cell-value{margin-right: 0.47rem;}
+.mint-field-clear {display: none;}
+.mint-cell-text{font-size:0.3rem;color: #758692;}
+.mint-cell-value input{font-size:0.3rem;}
+.mint-field-core{background: #fff;font-size: 0.3rem;}
+.mint-field.is-textarea{border:none;}
+
+.mint-popup{width:80%;border-radius: 8px;padding:0.35rem 0;text-align: center;}
+.mint-popup-bottom{position: fixed;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;}
+
+    .mint-msgbox{
+    background: #FFFFFF;
+    border-radius: 0.14rem;
+    width: 75%;
+}
+.mint-msgbox-btn{
+    font-size:16px;
+}
+.mint-popup{
+    background: #FFFFFF;
+    border-radius: 0.14rem;
+    width: 5.9rem;
+}
+.mint-radiolist-title{
+    margin: 0.2rem;
+    display: block;
+    color: #888;
+    font-size: 0.36rem;
+    color: #0A0A0A;
+    letter-spacing: 0;
+    text-align: center;
+}
+.mint-cell{
+  font-size:0.3rem;
+}
+
+.mint-cell-wrapper{
+    border: 1px solid #fff;
+    background-image: none;
+    background-image: none;
+}
+.addressList .footP .mint-radiolist-title{display: none;}
+.addressList .footP .mint-cell{line-height: 0.3rem;min-height: 0;}
+.mint-radio-core{border:1px solid #00DBD2;}
+.mint-radio-input:checked + .mint-radio-core{background-color: #00DBD2;border-color: #00DBD2;}
+
+/** 成功提示样式 **/
+.mint-toast-icon{display: inline-block;}
+.mint-toast-text{padding:0;}
+.successIcon{height:0.8rem;width:0.8rem;background-image: url('../../assets/img/success.png');background-size: cover;}
+
+/***********tab栏切换************/
+.mint-navbar{
+    padding: 0.26rem 0.3rem 0.26rem 0.3rem;
+    font-size: 0.3rem;
+}
+.mint-navbar  .mint-tab-item:first-child{
+    text-align:left;
+}
+.mint-navbar  .mint-tab-item:last-child{
+    text-align:right;
+}
+.mint-navbar .mint-tab-item.is-selected{
+    border-bottom: 0;
+    margin-bottom: 0;
+    background: #00DBD2;
+    border-radius: 1rem;
+    color: #fff;
+    text-align: center;
+}
+.mint-tab-item-label{
+    color: inherit; 
+    font-size: 0.3rem;
+    line-height: 2;
+}
+.mint-navbar .mint-tab-item{
+    padding: 0;
+    font-size: 0.3rem;
+    color: #000000;
+    letter-spacing: 0;
+}
+
+.editPhone .mint-field .mint-cell-title{width:1.9rem;}
+
+.indexDiv .mint-popup-bottom{
+    border-radius: 0;
+    width:100%;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    padding: 0;
+}
+.indexDiv .mint-popup-bottom .topD{border:1px solid #D4DCE1;padding:0.27rem 0.46rem;font-size:0.36rem;color: #758692;}
+.indexDiv .mint-popup-bottom .choseD{padding:0.1rem 0.46rem;}
+.indexDiv .choseD>div{border: 1px solid #EA608C;border-radius: 100px;font-size:0.3rem;color: #EA608C;text-align: center;width:3.5rem;height: 0.6rem;line-height: 0.58rem;margin:0.2rem 0;}
+.indexDiv .buy{margin:0.64rem 0.47rem 0.35rem 0.47rem;font-size:0.36rem;}
+.indexDiv .buy img{width: 0.48rem;}
+.indexDiv .next{width:100%;height:1.04rem;font-size: 0.36rem;color:#fff;background: #EA608C;border: none;}
+.indexDiv .choseD>.active{background: #EA608C;color:#fff;}
+
+.indexDiv .mint-popup-right{
+    border-radius: 0;
+    width:55%;
+    height: 100%;
+    top: 50%;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    padding: 0;
+}
+.indexDiv .rightMenu{position: relative;}
+.indexDiv .rightMenu>img{position: absolute;left: -0.55rem;top: 0.2rem;height:0.33rem}
+.indexDiv .rightMenu>div{padding: 0.4rem 0 0.4rem 0.65rem;border-bottom:1px solid #D4DCE1;font-size:0.36rem;text-align: left;}
+
+.mint-switch-input:checked + .mint-switch-core{border-color: #00DBD2;background-color: #00DBD2;}

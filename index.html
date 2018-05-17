@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0">
+    <title>随便写写</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    //rem 样式适应
+    window.onload = function () {
+      var t;
+      w();
+      window.addEventListener("resize", function () {
+        clearTimeout(t);
+        t = setTimeout(w, 300)
+      }, false);
+    }
+    function w() {
+      var r = document.documentElement;
+      var a = r.getBoundingClientRect().width;
+      if (a > 750) {
+        a = 750;
+      }
+      //750/w = 100/font-size
+      rem = a / 7.5;
+      r.style.fontSize = rem + "px"
+    }
+  </script>
+</html>
